@@ -1,0 +1,22 @@
+#Server Properties
+server:
+  port: 8083
+  
+  
+#Database and JPA Properties
+spring:
+  application:
+    name: RATING-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservices
+    username: root
+    password: 101845
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+  #external configs
+  config:
+    import: optional:configserver:http://localhost:8085
+    

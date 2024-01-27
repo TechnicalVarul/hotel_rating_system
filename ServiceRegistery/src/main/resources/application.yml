@@ -1,0 +1,12 @@
+#Server properties
+server:
+  port: 8061
+
+#Eureka Server properties
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    

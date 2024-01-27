@@ -1,0 +1,24 @@
+#Server Properties
+server:
+  port: 8082
+  
+
+# Databse & Hibernate Properties 
+spring:
+  application:
+    name: HOTEL-SERVICE
+  #MYSQL properties
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservices
+    username: root
+    password: 101845
+    
+  # JPA properties   
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  
+  #external configs
+  config:
+    import: optional:configserver:http://localhost:8085
